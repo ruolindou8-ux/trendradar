@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+
+PORT=${PORT:-8000}
+python -m uvicorn trendradar.api.app:app --host 0.0.0.0 --port ${PORT}
