@@ -1,5 +1,5 @@
 # coding=utf-8
 
-from trendradar.api.app import app
-
-__all__ = ["app"]
+# api/__init__.py
+# 只保留版本声明，删除所有错误的导入
+__version__ = "1.0.0"
