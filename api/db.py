@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import List, Dict, Optional
 
 # 项目根目录
-PROJECT_ROOT = Path("/workspaces/trendradar")
+PROJECT_ROOT = Path("/home/admin/trendradar")
 # 报告根目录
 REPORT_PATH = PROJECT_ROOT / "output"
 

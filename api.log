@@ -1,0 +1,446 @@
+nohup: ignoring input
+INFO:     Started server process [137746]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     223.104.83.126:56262 - "GET /reports/latest HTTP/1.1" 200 OK
+INFO:     223.104.83.126:56262 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     223.104.83.126:33313 - "GET /reports/latest HTTP/1.1" 200 OK
+INFO:     115.190.218.237:52324 - "GET /reports/latest?max_count=10 HTTP/1.1" 200 OK
+INFO:     115.190.218.237:43462 - "GET /reports/latest?max_count=10 HTTP/1.1" 200 OK
+INFO:     223.104.83.126:4776 - "GET /reports/latest HTTP/1.1" 200 OK
+INFO:     223.104.83.126:4776 - "GET /reports/latest HTTP/1.1" 200 OK
+INFO:     223.104.83.126:53730 - "GET / HTTP/1.1" 200 OK
+INFO:     223.104.83.126:3971 - "GET /reports/latest HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 73, in maybe_read_from_IDLE_client
+    request_line_re, lines[0], "illegal request line: {!r}", lines[0]
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 88, in validate
+    raise LocalProtocolError(msg)
+h11._util.RemoteProtocolError: illegal request line: bytearray(b'\x16\x03\x01\x06\xe0\x01\x00\x06\xdc\x03\x03#\xf0\xbe\xf0\xd8\x92\x91\xb5\x1b\xdcR\xd9\x8f\xb6#\xf3')
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 73, in maybe_read_from_IDLE_client
+    request_line_re, lines[0], "illegal request line: {!r}", lines[0]
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 88, in validate
+    raise LocalProtocolError(msg)
+h11._util.RemoteProtocolError: illegal request line: bytearray(b'\x16\x03\x01\x06\xa0\x01\x00\x06\x9c\x03\x03\x00\xdc\xb4M')
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 73, in maybe_read_from_IDLE_client
+    request_line_re, lines[0], "illegal request line: {!r}", lines[0]
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 88, in validate
+    raise LocalProtocolError(msg)
+h11._util.RemoteProtocolError: illegal request line: bytearray(b'\x16\x03\x01\x07\x00\x01\x00\x06\xfc\x03\x03\x82\xbd1<\xba\xf4\x9d\xe2\xe7\xe2\xa6\x060\x80o\x91U+\xd4\xabP\x17qg\xa2\xd7E\xc9\x822\x998 \xca\xc4\xf1+:vD\xaa\x16J\xeb\xf8.\x18')
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     52.167.144.56:38848 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     40.77.167.247:64641 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37470 - "GET /reports/latest HTTP/1.1" 200 OK
+INFO:     223.104.83.126:59844 - "GET /reports/latest HTTP/1.1" 200 OK
+INFO:     223.104.83.126:56592 - "GET /openapi.yaml HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 71, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("no request line received")
+h11._util.RemoteProtocolError: no request line received
+INFO:     3.130.168.2:60110 - "GET / HTTP/1.1" 200 OK
+INFO:     3.130.168.2:38514 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/uvicorn/protocols/http/h11_impl.py", line 136, in handle_events
+    event = self.conn.next_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 443, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/usr/local/lib/python3.6/site-packages/h11/_util.py", line 76, in _reraise_as_remote_protocol_error
+    raise self
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 425, in next_event
+    event = self._extract_next_receive_event()
+  File "/usr/local/lib/python3.6/site-packages/h11/_connection.py", line 367, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/usr/local/lib/python3.6/site-packages/h11/_readers.py", line 68, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     59.82.83.151:59111 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33704 - "GET /reports/latest HTTP/1.0" 200 OK
+INFO:     127.0.0.1:50474 - "GET /reports/latest HTTP/1.0" 200 OK
+INFO:     127.0.0.1:56046 - "GET /reports/latest HTTP/1.0" 200 OK
+INFO:     127.0.0.1:48468 - "GET /reports/latest HTTP/1.1" 200 OK
+INFO:     103.151.173.203:0 - "GET / HTTP/1.1" 200 OK
+INFO:     103.151.173.203:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     103.151.173.203:0 - "GET / HTTP/1.1" 200 OK
+INFO:     103.151.173.203:0 - "GET /report/latest HTTP/1.1" 404 Not Found
+INFO:     103.151.173.203:0 - "GET /reports/latest HTTP/1.1" 200 OK
+INFO:     106.38.226.4:0 - "GET /reports/latest HTTP/1.1" 200 OK
+INFO:     36.110.131.20:0 - "GET /reports/latest HTTP/1.1" 200 OK
+INFO:     103.151.173.203:0 - "GET /reports/latest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47408 - "GET /reports/latest HTTP/1.1" 200 OK

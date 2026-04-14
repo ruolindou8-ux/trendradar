@@ -1,0 +1,81 @@
+import re
+from fastapi import FastAPI, HTTPException
+from .db import read_report
+
+app = FastAPI(title="TrendRadar Plugin API")
+
+
+@app.get("/")
+async def root():
+    return {
+        "message": "TrendRadar Plugin API is running.",
+        "docs": "/docs",
+        "openapi": "/openapi.json"
+    }
+
+
+def parse_report_text(raw_text: str):
+    items = []
+    current_source = None
+    current_source_name = None
+
+    lines = raw_text.splitlines()
+
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+
+        source_match = re.match(r"^([a-zA-Z0-9_]+)\s*\|\s*(.+)$", line)
+        if source_match:
+            current_source = source_match.group(1).strip()
+            current_source_name = source_match.group(2).strip()
+            continue
+
+        item_match = re.match(r"^(\d+)\.\s*(.*?)\s*\[URL:(https?://.+?)\]\s*$", line)
+        if item_match:
+            rank = int(item_match.group(1))
+            title = item_match.group(2).strip()
+            url = item_match.group(3).strip()
+
+            items.append({
+                "source": current_source,
+                "source_name": current_source_name,
+                "rank": rank,
+                "title": title,
+                "url": url
+            })
+
+    return items
+
+
+@app.get("/reports/latest")
+async def get_latest_report():
+    try:
+        report = read_report()
+
+        if not report:
+            raise HTTPException(
+                status_code=404,
+                detail="未找到报告文件，请检查 output 目录"
+            )
+
+        if isinstance(report, str):
+            return parse_report_text(report)
+
+        if isinstance(report, dict):
+            raw_data = report.get("data")
+            if isinstance(raw_data, str):
+                return parse_report_text(raw_data)
+
+        return parse_report_text(str(report))
+
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        print(f"[ERROR] 接口异常: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"服务器内部错误: {str(e)}"
+        )
+

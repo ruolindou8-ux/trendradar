@@ -1,10 +1,11 @@
-# api/app.py 中 get_latest_report 接口 最终稳定版
+import re
+import json
 from fastapi import FastAPI, HTTPException
-from .db import read_report  # 相对导入，正确写法
+from .db import read_report
 
 app = FastAPI(title="TrendRadar Plugin API")
 
-# 根接口
+
 @app.get("/")
 async def root():
     return {
@@ -13,31 +14,85 @@ async def root():
         "openapi": "/openapi.json"
     }
 
-# 最新报告接口（完整空值保护+异常捕获）
+
+def parse_report_text(raw_text: str):
+    items = []
+    current_source = None
+    current_source_name = None
+
+    for line in raw_text.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+
+        # 来源行：toutiao | 今日头条
+        source_match = re.match(r"^([a-zA-Z0-9_]+)\s*\|\s*(.+)$", line)
+        if source_match:
+            current_source = source_match.group(1).strip()
+            current_source_name = source_match.group(2).strip()
+            continue
+
+        # 新闻行：1. 标题 [URL:https://...]
+        item_match = re.match(r"^(\d+)\.\s*(.*?)\s*\[URL:(https?://.+?)\]\s*$", line)
+        if item_match:
+            items.append({
+                "source": current_source,
+                "source_name": current_source_name,
+                "rank": int(item_match.group(1)),
+                "title": item_match.group(2).strip(),
+                "url": item_match.group(3).strip()
+            })
+
+    return items
+
+
+def extract_content(report):
+    # 如果 report 本身是字符串，先尝试按 JSON 解析
+    if isinstance(report, str):
+        try:
+            report = json.loads(report)
+        except Exception:
+            return report
+
+    # report = {"file_name": "...", "content": "..."}
+    if isinstance(report, dict):
+        content = report.get("content")
+        if isinstance(content, str):
+            return content
+
+        # report = {"code":200, "message":"success", "data": {...}}
+        data = report.get("data")
+        if isinstance(data, str):
+            return data
+        if isinstance(data, dict):
+            content = data.get("content")
+            if isinstance(content, str):
+                return content
+
+    return ""
+
+
 @app.get("/reports/latest")
 async def get_latest_report():
     try:
-        # 1. 读取报告
         report = read_report()
-        
-        # 2. 绝对空值判断：只要是None，直接返回404，绝不执行后续代码
+
         if not report:
             raise HTTPException(
                 status_code=404,
-                detail="未找到报告文件，请检查output目录"
+                detail="未找到报告文件，请检查 output 目录"
             )
-        
-        # 3. 安全返回数据
-        return {
-            "code": 200,
-            "message": "success",
-            "data": report
-        }
+
+        raw_text = extract_content(report)
+        if not raw_text:
+            return []
+
+        items = parse_report_text(raw_text)
+        return items
+
     except HTTPException as e:
-        # 直接抛出HTTP异常，FastAPI自动处理
         raise e
     except Exception as e:
-        # 捕获所有其他异常，打印日志，返回500
         print(f"[ERROR] 接口异常: {str(e)}")
         raise HTTPException(
             status_code=500,

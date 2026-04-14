@@ -1,0 +1,62 @@
+正在加载配置...
+配置文件加载成功: config/config.yaml
+未配置任何通知渠道
+TrendRadar v3.0.5 配置加载完成
+监控平台数量: 39
+本地环境，未启用代理
+当前北京时间: 2026-04-09 14:49:27
+未配置任何通知渠道，将只进行数据抓取，不发送通知
+报告模式: daily
+运行模式: 当日汇总模式（所有匹配新闻 + 新增新闻区域 + 按时推送）
+配置的监控平台: ['今日头条', '百度热搜', '澎湃新闻', '凤凰网', '参考消息', '卫星通讯社', '联合早报', 'MKT新闻', '靠谱新闻', '华尔街见闻 最热', '华尔街见闻 快讯', '华尔街见闻 最新', '财联社热门', '格隆汇', '雪球', '金十数据', '快讯通', '微博', '抖音', 'bilibili 热搜', '贴吧', '知乎', '虎扑', 'IT之家', '掘金', 'GitHub', 'Hacker News', 'Solidot', 'V2EX', '牛客网', '远景论坛', '少数派', 'ProductHunt', '虫部落', '腾讯新闻 综合早报', '财联社 电报', '财联社 深度', '法布财经 快讯', '法布财经 头条']
+开始爬取数据，请求间隔 1000 毫秒
+获取 toutiao 成功（最新数据）
+获取 baidu 成功（缓存数据）
+获取 thepaper 成功（最新数据）
+获取 ifeng 成功（最新数据）
+获取 cankaoxiaoxi 成功（最新数据）
+获取 sputniknewscn 成功（最新数据）
+获取 zaobao 成功（最新数据）
+获取 mktnews 成功（缓存数据）
+获取 kaopu 成功（最新数据）
+获取 wallstreetcn-hot 成功（最新数据）
+获取 wallstreetcn-quick 成功（最新数据）
+获取 wallstreetcn-news 成功（最新数据）
+获取 cls-hot 成功（最新数据）
+获取 gelonghui 成功（缓存数据）
+获取 xueqiu 成功（缓存数据）
+获取 jin10 成功（缓存数据）
+获取 fastbull 成功（缓存数据）
+获取 weibo 成功（最新数据）
+获取 douyin 成功（最新数据）
+获取 bilibili-hot-search 成功（缓存数据）
+获取 tieba 成功（最新数据）
+获取 zhihu 成功（最新数据）
+获取 hupu 成功（最新数据）
+获取 ithome 成功（最新数据）
+获取 juejin 成功（缓存数据）
+获取 github 成功（缓存数据）
+获取 hackernews 成功（缓存数据）
+获取 solidot 成功（最新数据）
+获取 v2ex 成功（缓存数据）
+获取 nowcoder 成功（缓存数据）
+获取 pcbeta 成功（缓存数据）
+获取 sspai 成功（最新数据）
+获取 producthunt 成功（缓存数据）
+获取 chongbuluo 成功（最新数据）
+获取 tencent-hot 成功（最新数据）
+获取 cls-telegraph 成功（缓存数据）
+获取 cls-depth 成功（最新数据）
+获取 fastbull-express 成功（缓存数据）
+获取 fastbull-news 成功（最新数据）
+成功: ['toutiao', 'baidu', 'thepaper', 'ifeng', 'cankaoxiaoxi', 'sputniknewscn', 'zaobao', 'mktnews', 'kaopu', 'wallstreetcn-hot', 'wallstreetcn-quick', 'wallstreetcn-news', 'cls-hot', 'gelonghui', 'xueqiu', 'jin10', 'fastbull', 'weibo', 'douyin', 'bilibili-hot-search', 'tieba', 'zhihu', 'hupu', 'ithome', 'juejin', 'github', 'hackernews', 'solidot', 'v2ex', 'nowcoder', 'pcbeta', 'sspai', 'producthunt', 'chongbuluo', 'tencent-hot', 'cls-telegraph', 'cls-depth', 'fastbull-express', 'fastbull-news'], 失败: []
+标题已保存到: output/2026年04月09日/txt/14时50分.txt
+当日汇总模式：处理 943 条新闻，模式：频率词过滤
+HTML报告已生成: output/2026年04月09日/html/14时50分.html
+生成当日汇总报告...
+当前监控平台: ['toutiao', 'baidu', 'thepaper', 'ifeng', 'cankaoxiaoxi', 'sputniknewscn', 'zaobao', 'mktnews', 'kaopu', 'wallstreetcn-hot', 'wallstreetcn-quick', 'wallstreetcn-news', 'cls-hot', 'gelonghui', 'xueqiu', 'jin10', 'fastbull', 'weibo', 'douyin', 'bilibili-hot-search', 'tieba', 'zhihu', 'hupu', 'ithome', 'juejin', 'github', 'hackernews', 'solidot', 'v2ex', 'nowcoder', 'pcbeta', 'sspai', 'producthunt', 'chongbuluo', 'tencent-hot', 'cls-telegraph', 'cls-depth', 'fastbull-express', 'fastbull-news']
+读取到 1425 个标题（已按当前监控平台过滤）
+当日汇总模式：处理 1425 条新闻，模式：频率词过滤
+当日汇总报告已生成: output/2026年04月09日/html/当日汇总.html
+⚠️ 警告：通知功能已启用但未配置任何通知渠道，将跳过通知发送
+正在打开汇总报告: file:///home/admin/trendradar/output/2026年04月09日/html/当日汇总.html
